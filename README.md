@@ -2,14 +2,14 @@
 ======
 
 
-Requirements to build & run:
+## Requirements to build & run:
 
-OpenCV
-======
+### OpenCV
+
 
 You'll need to download opencv 3.0 alpha @:
 
-http://opencv.org/downloads.html
+* http://opencv.org/downloads.html
 
 AND
 
@@ -19,24 +19,23 @@ Currently it's set @ C:\opencv.
 
 It may be better to create a new solution (if you're using visual studio) and just import the .cpp&.hpp file.
 
-Android Debug Interface
-=======================
+### Android Debug Bridge
 
 You can either download the entire android sdk which includes ADB.exe
 
-https://developer.android.com/sdk/installing/index.html?pkg=tools
+* https://developer.android.com/sdk/installing/index.html?pkg=tools
 
 OR
 
 you could try using the standalone ADB program (excludes unnecessary sdk files):
 
-http://sourceforge.net/projects/adbstandalone/
+* http://sourceforge.net/projects/adbstandalone/
 
 
 
 Instructions:
 
-You'll need to move screen.bat to the same directory as your adb.exe.
+First you'll need to move screen.bat to the same directory as your adb.exe.
 
 Also, update the ADB_DIR file path variable  in opencv.hpp accordingly.
 
