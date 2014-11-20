@@ -1,13 +1,15 @@
 CS 271 - Words (with Friends) AI 
 ======
 
-
+---
 ###  General requirements to build & run:
 
 
 
 
+---
 ###### OpenCV
+
 
 You'll need to download opencv 3.0 alpha @:
 
@@ -22,8 +24,9 @@ Reconfigure the project properties to point to your opencv installation director
 *Note,* it you're having trouble opening the solution, may be better to create a new project and just import the files.
 
 
-
+---
 ###### Android Debug Bridge
+
 
 You can either download the entire android sdk which includes ADB.exe
 
@@ -36,8 +39,9 @@ you could try using the standalone ADB program (excludes unnecessary sdk files):
 >  http://sourceforge.net/projects/adbstandalone/
 
 
-
+---
 #### Instructions:
+
 
 * Move screen.bat to the same directory as your adb.exe.
 
@@ -60,7 +64,7 @@ Run these commands below , and see if you're your phone is listed
 If your device is not listed, verify you have debugging privilege enabled on your phone. 
 Newer versons of android hide this option by default, you'll have to google.
 
-
+---
 ### File Synopsis
 
 **main.cpp** contains all the functions for retrieval and image processing of the the screenshot.
@@ -71,27 +75,26 @@ This program at a basic level uses the template image file (images\all.png) and 
 **dict.txt** contains all the valid words in the game's dictionary. Ideally we'll load these words in a trie (not memory efficient unless we use a compact trie), but for our purposes we can trade off space for the speed of fast dictionary lookups. We'll likely have to customize our own version of the radix/patricia/suffix tree so we can find words via certain patterns and words that are similiar to another word.
 
 
-
+---
 ### AI Approach 
 
 I'm just brainstorming here, but here's what I had in mind:
 
 TODO:
 Find all valid words that can be formed using the 7 letters available.
+i,e. find all permutations and check if it is contained in the dictionary.
 
--Find all permutations and check if it is contained in the dictionary.
+Add these words to a priority queue using the word point value (without modifiers) as a key.
 
--Add these words to a priority queue using the word point value (without modifiers) as a key.
+(Each letter has its own point value, total points of any word equals equals the sum of all points of the letters + any modifiers the letters are placed on: Tripple Letter, Tripple Word, Double Letter, Double Word)
 
-(Each letter has it's own point value, total points of any word equals equals the sum of all points of the letters + any modifiers the letters are placed on: Tripple Letter, Tripple Word, Double Letter, Double Word)
+For our preliminary heuristic, we can ignore the modifiers.
 
--For our preliminary heuristic, we can ignore the modifiers.
-
--At some point, we'll have to include the points with modifiers.
+At some point, we'll have to include the points with modifiers.
 
 Words can also be formed by using existing tiles/letters on the game board. We'll have to iterate through each letter on the board and add it to our pool of currently available letters. Then recompute all  valid words. 
 
-After some analysis, we can probably make inferences on how to algorithmitically simply this process.
+After some analysis, we can probably make inferences on how to simplify this algorithm.
 
 
 
@@ -99,4 +102,4 @@ After some analysis, we can probably make inferences on how to algorithmitically
 
 
 
-...
+
