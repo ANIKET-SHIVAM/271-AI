@@ -32,16 +32,16 @@ char* result_window = "Result window";
 int match_method;
 int max_Trackbar = 5;
 int lowT;
-char GAME_STATE[15][15];
 queue<Point> locations;
 char L;
 Mat mx;
 string ADB_DIR("C:/adt/sdk/platform-tools/");
-class RGB {
-public:
+class _RGB {
+  public:
     uchar R;
     uchar G;
     uchar B;
-    RGB(uchar R,uchar G, uchar B) : R(R), G(G), B(B) {}
+    _RGB(uchar R,uchar G, uchar B) : R(R), G(G), B(B) {}
 };
+
 #endif

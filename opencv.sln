@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opencv", "opencv\opencv.vcxproj", "{D547D8A8-7F27-49E3-9699-1AD926791481}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.vcxproj", "{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -27,16 +25,6 @@ Global
 		{D547D8A8-7F27-49E3-9699-1AD926791481}.Release|Win32.Build.0 = Release|Win32
 		{D547D8A8-7F27-49E3-9699-1AD926791481}.Release|x64.ActiveCfg = Release|x64
 		{D547D8A8-7F27-49E3-9699-1AD926791481}.Release|x64.Build.0 = Release|x64
-		{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}.Debug|Mixed Platforms.Build.0 = Debug|Win32
-		{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}.Debug|Win32.ActiveCfg = Debug|Win32
-		{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}.Debug|Win32.Build.0 = Debug|Win32
-		{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}.Debug|x64.ActiveCfg = Debug|Win32
-		{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}.Release|Mixed Platforms.ActiveCfg = Release|Win32
-		{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}.Release|Mixed Platforms.Build.0 = Release|Win32
-		{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}.Release|Win32.ActiveCfg = Release|Win32
-		{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}.Release|Win32.Build.0 = Release|Win32
-		{8CDFD013-DF08-47DE-81A1-53C14F8B1ADE}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
