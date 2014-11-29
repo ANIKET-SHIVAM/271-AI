@@ -1,5 +1,6 @@
 #include "opencv.hpp"
 #include "AI.hpp"
+#include "trie.hpp"
 
 
 
