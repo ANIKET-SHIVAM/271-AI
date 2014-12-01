@@ -141,3 +141,78 @@ void AI_Manager::printLetters() {
     }
     cout << endl << endl;
 }
+
+/// modified by Aniket:Nov 29
+
+////////Utility functions
+
+string AI_Manager::removed(string hand, string remove){
+    for (i=0;i<strlen(remove);i++){
+        for (j=0;j<strlen(hand);j++){
+            if (remove[i]==hand[j])
+            { hand.erase(j,1);break;}
+        }
+    }
+    return hand;
+}
+
+void AI_Manager::transpose(){
+    for (i=0;i<BOARD_L;i++){
+        for(j=0;i<BOARD_L;j++)
+            BOARD[j][i]=BOARD[i][j];
+    }
+}
+
+
+////////PLAY FUNCTIONS
+
+void AI_Manager::setAnchors(){
+    for (int i=0; i<BOARD_L; i++) {
+        for(int j=0; j<BOARD_W; j++){
+            if (BOARD[i,j] != ""){
+                if (BOARD[i,j-1] == "")
+                    BOARD[i,j-1] = "?";
+                if (BOARD[i,j+1] == "")
+                    BOARD[i,j+1] = "?";
+            }
+        }
+    }
+    
+}
+
+
+
+void AI_Manager::findPrefixes(){
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

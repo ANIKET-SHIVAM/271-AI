@@ -63,6 +63,31 @@ int search(trie_t *pTrie,char key[]){
     else return 0;
 }
 
+// check if prefix present in trie or not
+int prefix(trie_t *pTrie, char key[]){
+    
+    int index;
+    int len = strlen(key);
+    trie_node_t *pCrawl;
+    pCrawl = pTrie->root;
+    
+    for( int level = 0; level<len;level++)
+    {
+        index = CtoI(key[level]);
+        if(!pCrawl->children[index]){
+            //This means that word doesn't exists
+            return 0;
+        }
+        pCrawl = pCrawl->children[index];
+        
+    }
+    
+    if(pCrawl->value==0) return 1;
+    else return 0;
+    
+}
+
+
 //Creates dictionary using the list
 int create_dict(){
     string line;

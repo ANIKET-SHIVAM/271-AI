@@ -1,6 +1,7 @@
 #ifndef AI_HPP
 #define AI_HPP
 
+#include <trie.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <vector>
@@ -20,7 +21,6 @@ using namespace std;
 class AI_Manager {
   public:
     enum { REG,DL,DW,TL,TW};
-
     int SCORE_A;
     int SCORE_B;
     char BOARD[BOARD_W][BOARD_L];
@@ -33,6 +33,7 @@ class AI_Manager {
         alphabet& operator--() {
             count--;
         }
+        
     };
     char LETTERS[7];
     int mult[6][6];
@@ -51,6 +52,8 @@ class AI_Manager {
     int val(char x);
     void AI_Manager::printBoard(void);
     void AI_Manager::printLetters(void);
+    
+    
 };
 
 

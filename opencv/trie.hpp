@@ -39,6 +39,10 @@ void insert(trie_t *pTrie, char key[]);
 // Search a key in the trie pTrie, returns non-zero
 int search(trie_t *pTrie,char key[]);
 
+
+// check if prefix present in trie or not
+int prefix(trie_t *pTrie, char key[]);
+
 //Creates dictionary using the list
 int create_dict();
 
